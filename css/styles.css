@@ -64,11 +64,6 @@ body {
   color: #6c757d; /* Texto muted */
 }
 
-
-
-  
-
-
 /* Header principal */
 .navbar {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(24, 23, 23, 0.8));
@@ -176,6 +171,19 @@ body {
         height: 200px;
         object-fit: cover;
     }
+    /*detalles de carousel de propiedades*/
+    .carousel-item img {
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .bg-light p,
+    ul li {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+    
 /* Estilo general del footer */
 .footer-custom {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(24, 23, 23, 0.8));
@@ -217,6 +225,181 @@ body {
 .footer-custom .social-icons a:hover {
   color: #ffc107;
 }
+/* CONTENEDOR GENERAL */
+section.container {
+  max-width: 1200px;
+}
+
+/* TÍTULO Y UBICACIÓN */
+h2.text-uppercase {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #222;
+}
+
+p.text-muted {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* CARRUSEL DE IMÁGENES */
+.carousel-item img {
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* PANEL DE DETALLE */
+.propiedad-detalle-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* PRECIO */
+.propiedad-precio {
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  text-align: right;
+}
+
+/* DATOS DE CONTACTO Y ACCIONES */
+
+
+section.container {
+  max-width: 1200px;
+}
+
+h2.text-uppercase {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #222;
+}
+
+p.text-muted {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-item img {
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.propiedad-detalle-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.propiedad-precio {
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  text-align: right;
+}
+
+.propiedad-contacto {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.propiedad-contacto p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.propiedad-contacto i {
+  color: #0d6efd;
+}
+
+.propiedad-formulario {
+  padding: 15px;
+}
+
+.propiedad-formulario h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+.propiedad-formulario input,
+.propiedad-formulario textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  border-radius: 3px;
+}
+
+.propiedad-formulario button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.propiedad-formulario button:hover {
+  background-color: #084298;
+}
+/*estilos para about us*/
+.about-section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-section hr {
+  width: 80px;
+  height: 3px;
+  background-color: #0d6efd;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -237,5 +420,26 @@ body {
     text-align: center;
     gap: 0.5rem;
   }
+    .contact-banner .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+    .propiedad-precio {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  
+    h2.text-uppercase {
+      font-size: 1.3rem;
+    }
+    .carousel-item img {
+      max-height: 300px;
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+    }
+  
   
 }
