@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadComponent("components/carousel.html", "carousel-container");
     loadComponent("components/propiedades.html", "propiedades-container");
     loadComponent("components/aboutUs.html", "nosotros-container");
+    loadComponent("components/tuPropiedad.html", "tuPropiedad-container");
     
 
   });

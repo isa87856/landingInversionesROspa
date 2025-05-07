@@ -8,7 +8,7 @@ body {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #fff!important;
   }
   
   /* ---------------------------
@@ -17,21 +17,21 @@ body {
   h1, .titulo-principal {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #003366;
+    color: #212222;
     margin-bottom: 1rem;
   }
   
   h2, .subtitulo-principal {
     font-size: 2rem;
     font-weight: 600;
-    color: #004080;
+    color: #212222;
     margin-bottom: 0.75rem;
   }
   
   h3, h4 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #0059b3;
+    color: #212222;
     margin-bottom: 0.5rem;
   }
   
@@ -49,23 +49,23 @@ body {
   background-color: #f8f9fa !important; /* Bootstrap light */
 }
 
-.contact-banner {
+header .contact-banner {
   padding: 0.5rem 0;
   font-size: 0.95rem;
   border-bottom: 1px solid #dee2e6;
 }
 
-.contact-banner i {
-  color: #0d6efd; /* Azul Bootstrap o tu color principal */
+header .contact-banner i {
+  color: #212222;; /* Azul Bootstrap o tu color principal */
   font-size: 1.2rem;
 }
 
-.contact-banner span {
-  color: #6c757d; /* Texto muted */
+header .contact-banner span {
+  color: #212222;; /* Texto muted */
 }
 
 /* Header principal */
-.navbar {
+header .navbar {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(24, 23, 23, 0.8));
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -73,38 +73,38 @@ body {
 }
 
 /* Logo y texto de la marca */
-.navbar-brand {
+header .navbar-brand {
   color: #ffffff;
   font-size: 1.2rem;
 }
-.navbar-brand span {
+header .navbar-brand span {
   color: #ffffff;
 }
-.navbar-brand small {
+header .navbar-brand small {
   font-size: 0.7rem;
-  color: #ccc;
+  color: #212222;;
 }
 
 /* Ítems del menú */
-.navbar-nav .nav-link {
+header .navbar-nav .nav-link {
   color: #ffffff !important;
   font-size: 0.95rem;
   margin-left: 15px;
   transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
+header .navbar-nav .nav-link:hover {
   color: #d8a712 !important; /* color dorado suave al pasar el mouse */
 }
 
 /* Dropdown */
-.navbar .dropdown-menu {
+header .navbar .dropdown-menu {
   background-color: rgba(33, 33, 33, 0.95);
 }
-.navbar .dropdown-item {
+header .navbar .dropdown-item {
   color: #ffffff;
 }
-.navbar .dropdown-item:hover {
+header .navbar .dropdown-item:hover {
   background-color: #444;
 }
   /* ---------------------------
@@ -138,35 +138,35 @@ body {
     text-decoration: underline;
   }
   /**estilos de componente propiedades*/
-  .propiedad-card {
+  #corretaje-section .propiedad-card {
     border: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
   
-  .propiedad-card:hover {
+  #corretaje-section .propiedad-card:hover {
     transform: translateY(-5px);
   }
   
-  .propiedad-card .card-title {
+  #corretaje-section .propiedad-card .card-title {
     font-weight: 600;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
   
-  .propiedad-card .precio {
+  #corretaje-section .propiedad-card .precio {
     font-size: 1.1rem;
     font-weight: bold;
     color: #004080;
   }
-    .propiedad-card .descripcion {
+  #corretaje-section .propiedad-card .descripcion {
         font-size: 0.9rem;
         color: #666;
-    }
-    .propiedad-card .card-body {
+  }
+  #corretaje-section .propiedad-card .card-body {
         padding: 1.5rem;
-    }   
-    .propiedad-card .card-img-top {     
+  }   
+  #corretaje-section  .propiedad-card .card-img-top {     
         border-radius: 0.3rem;
         height: 200px;
         object-fit: cover;
@@ -183,10 +183,121 @@ body {
       color: #6c757d;
       font-size: 0.95rem;
     }
-    
-/* Estilo general del footer */
-.footer-custom {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(24, 23, 23, 0.8));
+
+#tuPropiedad-section .form-background {
+  position: relative;
+  background-image: url('../assets/img/corretaje.jpg');
+  background-size: cover;
+  background-position: center;
+  max-width: 100%; 
+  height: 550px; /* Ajusta la altura según sea necesario */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
+}
+
+#tuPropiedad-section .form-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /**background-color: rgba(255, 255, 255, 0.932); /* Ajusta el color y la opacidad */
+  z-index: 1;
+}
+
+#tuPropiedad-section .form-background * {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima de la superposición */
+}
+
+#tuPropiedad-section .form-background h3 {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+#tuPropiedad-section .form-background h2,
+#tuPropiedad-section .form-background h3 {
+    text-align: right; /* Alinea el texto al lado izquierdo */
+    margin-left: 450px; /* Asegura que no haya margen adicional a la izquierda */
+}
+/*estilos del formulario de tu propiedad*/
+/* Estilo general del formulario */
+.form-section {
+  margin-top: 60px;
+  background-color: #f9f9f9; /* Fondo claro para contraste */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493); /* Sombra para un efecto elegante */
+}
+
+/* Estilo de los títulos */
+.form-section h2 {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+  font-size: 1.8rem;
+  color: #333; /* Color oscuro para contraste */
+  margin-bottom: 10px;
+}
+
+.form-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #555; /* Color más claro para subtítulos */
+  margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+.form-section .form-label {
+  font-weight: 600; /* Negrita para destacar */
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Estilo de los campos de entrada */
+.form-section .form-control,
+.form-section .form-select,
+.form-section textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.form-section .form-control:focus,
+.form-section .form-select:focus,
+.form-section textarea:focus {
+  border-color: #007bff; /* Color azul al enfocar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
+  outline: none;
+}
+
+/* Estilo de los botones */
+.form-section .btn-primary {
+  background-color: #007bff; /* Azul profesional */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.form-section .btn-primary:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Estilo del pie del formulario */
+.form-section .form-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}/* Estilo general del footer */
+#footer-section {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(19, 18, 18, 0.8));
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   color: #ffffff;
@@ -196,33 +307,32 @@ body {
 }
 
 /* Texto del footer */
-.footer-custom p,
-.footer-custom a {
-  color: #ffffff;
-  margin: 0;
-  font-size: 0.9rem;
+#footer-section  p, a {
+  color: #000000;
+  margin: 0.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
-.footer-custom a:hover {
+#footer-section  a:hover {
   color: #ffc107; /* dorado al pasar el mouse */
 }
 
 /* Separación para elementos múltiples */
-.footer-custom .footer-section {
+#footer-section  .footer-section {
   margin-bottom: 15px;
 }
 
 /* Estilo para íconos de redes sociales (si usas FontAwesome) */
-.footer-custom .social-icons a {
-  margin-right: 10px;
-  font-size: 1.2rem;
+#footer-section .social-icons a {
+  margin-right: 20px;
+  font-size: 2.6rem;
   display: inline-block;
   color: #ffffff;
   transition: color 0.3s;
 }
 
-.footer-custom .social-icons a:hover {
+#footer-section .social-icons a:hover {
   color: #ffc107;
 }
 /* CONTENEDOR GENERAL */
@@ -238,8 +348,10 @@ h2.text-uppercase {
 }
 
 p.text-muted {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 1.5rem;
+  color: #222;
+  text-align: left;
 }
 
 /* CARRUSEL DE IMÁGENES */
@@ -268,7 +380,7 @@ p.text-muted {
 
 /* PRECIO */
 .propiedad-precio {
-  background-color: #222;
+  background-color: #ffffff;
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
@@ -286,7 +398,7 @@ section.container {
 h2.text-uppercase {
   font-weight: 700;
   font-size: 1.75rem;
-  color: #222;
+  color: #faf3f3;
 }
 
 p.text-muted {
@@ -317,7 +429,7 @@ p.text-muted {
 }
 
 .propiedad-precio {
-  background-color: #222;
+  background-color: #ffffff;
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
@@ -336,7 +448,7 @@ p.text-muted {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #333;
+  color: #202020;
 }
 
 .propiedad-contacto i {
@@ -379,7 +491,7 @@ p.text-muted {
 .propiedad-formulario button:hover {
   background-color: #084298;
 }
-/*estilos para about us*/
+/*estilos para  la seccion about us*/
 .about-section h2 {
   font-weight: 700;
   font-size: 2rem;
@@ -399,12 +511,45 @@ p.text-muted {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 4%; /* Distancia desde la parte inferior en porcentaje */
+  right: 2%; /* Distancia desde la parte izquierda en porcentaje */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  background-color: #25d366; /* Color de fondo de WhatsApp */
+  border-radius: 50%;
+  width: 80px; /* Tamaño inicial del ícono */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.whatsapp-float a {
+  color: white;
+  font-size: 3rem; /* Tamaño del ícono relativo */
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57; /* Color más oscuro al pasar el cursor */
+}
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-custom {
     text-align: center;
+  }
+  .whatsapp-float {
+    width: 50px; /* Reduce el tamaño del ícono */
+    height: 50px;
+    bottom: 3%; /* Ajusta la posición */
+    left: 3%;
+  }
+
+  .whatsapp-float a {
+    font-size: 1.2rem; /* Reduce el tamaño del ícono */
   }
 
   .footer-custom .social-icons {
@@ -439,6 +584,13 @@ p.text-muted {
   
     h2 {
       font-size: 1.25rem;
+    }
+    .form-section {
+      padding: 20px;
+    }
+  
+    .form-section h2 {
+      font-size: 1.5rem;
     }
   
   
