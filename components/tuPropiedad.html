@@ -1,6 +1,16 @@
 <section id="tuPropiedad-section" class="d-flex align-items-center">
     <div class="container py-5">
       <div class="row align-items-center">
+        <!-- Columna derecha: Texto -->
+        <div class="col-lg-6">
+            <div class="form-background text-center">
+              <h2 class="mb-4">¿Quieres Vender o Arrendar tu Propiedad?</h2>
+              <h3 class="text-muted"><br>
+                No te preocupes, nosotros te asesoramos.
+                Déjanos tus datos y pronto nos contactaremos.
+              </h3>
+            </div>
+          </div>
         <!-- Columna izquierda: Formulario -->
         <div class="col-lg-6">
           <div class="form-section p-4">
@@ -25,8 +35,8 @@
                     <input type="tel" name="telefono" class="form-control" id="fono" required>
                   </div>
                 <div class="col-md-6">
-                  <label for="condicion" class="form-label">Necesitas...</label>
-                  <select name="condicion" class="form-select" id="condicion">
+                  <label for="servicio" class="form-label">Servicios</label>
+                  <select name="servicio" class="form-select" id="servicio">
                     <option value="">Seleccione</option>
                     <option>Vender</option>
                     <option>Arrendar</option>
@@ -35,28 +45,36 @@
                 </div>
             </div>
               <br>
-  
               <div class="col-12">
                 <label for="comentarios" class="form-label">Déjanos tus comentarios</label>
                 <textarea name="comentarios" class="form-control" id="comentarios" rows="3"></textarea>
               </div>
               <br>
+              <div id="error-message" class="text-danger d-none mt-2">
+                Por favor, completa los campos requeridos.
+              </div>
   
               <div class="mt-4">
                 <button type="submit" class="btn btn-primary w-100">Enviar Información</button>
               </div>
+              <!--Ventana emergente -->
+              <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="successModalLabel">¡Enviado con éxito!</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      Tus datos han sido enviados correctamente. Nos pondremos en contacto contigo pronto.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </form>
-          </div>
-        </div>
-  
-        <!-- Columna derecha: Texto -->
-        <div class="col-lg-6">
-          <div class="form-background text-center">
-            <h2 class="mb-4">¿Quieres Vender o Arrendar tu Propiedad?</h2>
-            <h3 class="text-muted">
-              No te preocupes, nosotros te asesoramos.<br>
-              Déjanos tus datos y pronto nos contactaremos contigo.
-            </h3>
           </div>
         </div>
       </div>

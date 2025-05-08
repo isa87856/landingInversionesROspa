@@ -340,10 +340,12 @@ html {
   
     .form-background h2 {
       font-size: 1.5rem;
+      color: #ffffff;
     }
   
     .form-background h3 {
-      font-size: 1rem;
+      font-size: 1.4rem;
+      color: #1b244b;
     }
   
     #footer-section p, #footer-section a {
