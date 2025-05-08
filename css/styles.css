@@ -347,6 +347,57 @@ html {
       font-size: 1.4rem;
       color: #1b244b;
     }
+/* ------------------------------
+Fondo completo con imagen 
+-------------------------------*/
+/* Imagen de fondo cubriendo toda la ventana modal */
+.modal-full-image {
+  background-image: url('../assets/img/emergente.jpg'); /* Ajusta la ruta si es necesario */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay del contenido sobre la imagen */
+.modal-overlay-content {
+  background-color: rgba(0, 0, 0, 0.5); /* oscurece ligeramente para legibilidad */
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.modal-overlay-content p {
+  color: transparent;
+  font-size: 1rem;
+}
+
+.modal-overlay-content .btn-secondary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.modal-overlay-content .btn-secondary:hover {
+  background-color: #0056b3;
+}
+
   
     #footer-section p, #footer-section a {
       font-size: 0.9rem;
