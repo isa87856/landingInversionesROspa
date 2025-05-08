@@ -8,6 +8,26 @@
     
     <div class="form-section mx-auto" style="max-width: 800px;">
       <form>
+        <div class="text-center">
+            <h2 class="mb-4">Formulario de contacto</h2>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="nombre" class="form-label">Nombre*</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="col-md-4">
+            <label for="mail" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="mail" required>
+          </div>
+          <div class="col-md-4">
+            <label for="fono" class="form-label">Fono / Whatsapp*</label>
+            <input type="tel" class="form-control" id="fono" required>
+          </div>
+        </div><br><br>
+        <div class="text-center">
+            <h3 class="mb-4">Información adicional</h3>
+        </div>
         <div class="row g-3">
           <div class="col-md-6">
             <label for="direccion" class="form-label">Dirección</label>
@@ -34,7 +54,6 @@
               <option>Buena</option>
               <option>Intermedia</option>
               <option>Necesita Arreglos</option>
-              <option>Precaria</option>
             </select>
           </div>
 
@@ -52,7 +71,7 @@
           </div>
           <div class="col-md-6">
             <label for="caracteristicas" class="form-label">Características adicionales</label>
-            <textarea class="form-control" id="caracteristicas" rows="3" placeholder="Ej: Alfombra nueva, cerca de un parque..."></textarea>
+            <textarea class="form-control" id="caracteristicas" rows="3" placeholder="Ej: Alfombra nueva, cerca de un parque, piscina, quincho..."></textarea>
           </div>
 
           <div class="col-md-4">
@@ -72,26 +91,8 @@
               <option>Otro</option>
             </select>
           </div>
-
-          <div class="col-md-4">
-            <label for="nombre" class="form-label">Nombre*</label>
-            <input type="text" class="form-control" id="nombre" required>
-          </div>
-          <div class="col-md-4">
-            <label for="mail" class="form-label">Email*</label>
-            <input type="email" class="form-control" id="mail" required>
-          </div>
-          <div class="col-md-4">
-            <label for="fono" class="form-label">Fono / Whatsapp*</label>
-            <input type="tel" class="form-control" id="fono" required>
-          </div>
-
           <div class="col-12">
-            <label for="asunto" class="form-label">Asunto</label>
-            <input type="text" class="form-control" id="asunto">
-          </div>
-          <div class="col-12">
-            <label for="comentarios" class="form-label">Comentarios</label>
+            <label for="comentarios" class="form-label">Dejanos tus comentarios</label>
             <textarea class="form-control" id="comentarios" rows="3"></textarea>
           </div>
         </div>

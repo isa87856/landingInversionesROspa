@@ -1,14 +1,16 @@
-html {
-  scroll-behavior: smooth;
-}/* ---------------------------
+/* ---------------------------
    FUENTE GENERAL Y BASE
 ---------------------------- */
-body {
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    background-color: #fff!important;
+    background-color: #fff !important;
   }
   
   /* ---------------------------
@@ -38,75 +40,26 @@ body {
   /* ---------------------------
      PÁRRAFOS
   ---------------------------- */
-  p {
+  p, .text-muted {
     font-size: 1rem;
     color: #444;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
-  /* Estilos generales para el banner superior de contacto */
-.bg-light {
-  background-color: #f8f9fa !important; /* Bootstrap light */
-}
-
-header .contact-banner {
-  padding: 0.5rem 0;
-  font-size: 0.95rem;
-  border-bottom: 1px solid #dee2e6;
-}
-
-header .contact-banner i {
-  color: #212222;; /* Azul Bootstrap o tu color principal */
-  font-size: 1.2rem;
-}
-
-header .contact-banner span {
-  color: #212222;; /* Texto muted */
-}
-
-/* Header principal */
-header .navbar {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(24, 23, 23, 0.8));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Logo y texto de la marca */
-header .navbar-brand {
-  color: #ffffff;
-  font-size: 1.2rem;
-}
-header .navbar-brand span {
-  color: #ffffff;
-}
-header .navbar-brand small {
-  font-size: 0.7rem;
-  color: #212222;;
-}
-
-/* Ítems del menú */
-header .navbar-nav .nav-link {
-  color: #ffffff !important;
-  font-size: 0.95rem;
-  margin-left: 15px;
-  transition: color 0.3s ease;
-}
-
-header .navbar-nav .nav-link:hover {
-  color: #d8a712 !important; /* color dorado suave al pasar el mouse */
-}
-
-/* Dropdown */
-header .navbar .dropdown-menu {
-  background-color: rgba(33, 33, 33, 0.95);
-}
-header .navbar .dropdown-item {
-  color: #ffffff;
-}
-header .navbar .dropdown-item:hover {
-  background-color: #444;
-}
+  /* ---------------------------
+     ENLACES
+  ---------------------------- */
+  a {
+    text-decoration: none;
+    color: #0059b3;
+  }
+  
+  a:hover {
+    color: #003366;
+    text-decoration: underline;
+  }
+  
   /* ---------------------------
      BOTONES
   ---------------------------- */
@@ -126,32 +79,140 @@ header .navbar .dropdown-item:hover {
   }
   
   /* ---------------------------
-     ENLACES
+     HEADER Y NAVBAR
   ---------------------------- */
-  a {
-    text-decoration: none;
-    color: #0059b3;
+  header .navbar {
+    background: url('../assets/img/fondofooter.jpg') no-repeat center center;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
-  a:hover {
-    color: #003366;
-    text-decoration: underline;
-  }
-  /**estilos de componente propiedades*/
-  #corretaje-section .propiedad-card {
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  #corretaje-section .propiedad-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  #corretaje-section .propiedad-card .card-title {
+  header .navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  header .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 1rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  header .navbar-nav .nav-link:hover {
+    color: #ffd045cb !important;
+  }
+  /* ---------------------------
+     ESTILOS DE LA SECCION ABOUT 
+  ---------------------------- */
+  /* Estilo general de la sección "Sobre Nosotros" */
+.about-section {
+  background-color: #f8f9fa; /* Fondo claro para contraste */
+  padding: 60px 20px;
+}
+
+.about-section h2, .about-section h3 {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+  font-weight: 600;
+  color: #212529; /* Color oscuro para títulos */
+  text-align: center; /* Centra los títulos */
+}
+
+.about-section p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #555; /* Color gris para párrafos */
+  text-align: justify; /* Justifica los textos */
+  line-height: 1.8; /* Mejora la legibilidad */
+}
+
+.about-section hr {
+  width: 80px;
+  height: 3px;
+  background-color: #0d6efd; /* Azul profesional */
+  border: none;
+  margin: 20px auto; /* Centra la línea */
+}
+
+.about-section img {
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+  /* ---------------------------
+     FORMULARIO DE RECEPCION DE PROPIEDADES PARA CORRETAJE
+  ---------------------------- */
+  .form-section {
+    margin-top: 60px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .form-section .form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+  .form-section .form-control,
+  .form-section .form-select,
+  .form-section textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-section .form-control:focus,
+  .form-section .form-select:focus,
+  .form-section textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  .form-section .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-section .btn-primary:hover {
+    background-color: #0056b3;
+  }
+   
+  /* ---------------------------
+     PROPIEDADES
+  ---------------------------- */
+  #corretaje-section .propiedad-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #212222;
   }
   
   #corretaje-section .propiedad-card .precio {
@@ -159,432 +220,103 @@ header .navbar .dropdown-item:hover {
     font-weight: bold;
     color: #004080;
   }
+  
   #corretaje-section .propiedad-card .descripcion {
-        font-size: 0.9rem;
-        color: #666;
+    font-size: 1rem;
+    color: #666;
   }
-  #corretaje-section .propiedad-card .card-body {
-        padding: 1.5rem;
-  }   
-  #corretaje-section  .propiedad-card .card-img-top {     
-        border-radius: 0.3rem;
-        height: 200px;
-        object-fit: cover;
-    }
-    /*detalles de carousel de propiedades*/
-    .carousel-item img {
-      max-height: 450px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    
-    .bg-light p,
-    ul li {
-      color: #6c757d;
-      font-size: 0.95rem;
-    }
-
-#tuPropiedad-section .form-background {
-  position: relative;
-  background-image: url('../assets/img/corretaje.jpg');
-  background-size: cover;
-  background-position: center;
-  max-width: 100%; 
-  height: 550px; /* Ajusta la altura según sea necesario */
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
+/* ---------------------------
+   seccion de experiencias o testimonios 
+---------------------------- */
+.testimonios {
+  background-color: #f8f9fa;
 }
 
-#tuPropiedad-section .form-background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /**background-color: rgba(255, 255, 255, 0.932); /* Ajusta el color y la opacidad */
-  z-index: 1;
-}
-
-#tuPropiedad-section .form-background * {
-  position: relative;
-  z-index: 2; /* Asegura que el contenido esté por encima de la superposición */
-}
-
-#tuPropiedad-section .form-background h3 {
-  font-size: 1.2rem;
-  color: #000000;
-}
-
-#tuPropiedad-section .form-background h2,
-#tuPropiedad-section .form-background h3 {
-    text-align: right; /* Alinea el texto al lado izquierdo */
-    margin-left: 450px; /* Asegura que no haya margen adicional a la izquierda */
-}
-/*estilos del formulario de tu propiedad*/
-/* Estilo general del formulario */
-.form-section {
-  margin-top: 60px;
-  background-color: #f9f9f9; /* Fondo claro para contraste */
-  border: 1px solid #ddd; /* Borde sutil */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493); /* Sombra para un efecto elegante */
-}
-
-/* Estilo de los títulos */
-.form-section h2 {
-  font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
-  font-size: 1.8rem;
-  color: #333; /* Color oscuro para contraste */
-  margin-bottom: 10px;
-}
-
-.form-section h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  color: #555; /* Color más claro para subtítulos */
-  margin-bottom: 20px;
-}
-
-/* Estilo de las etiquetas */
-.form-section .form-label {
-  font-weight: 600; /* Negrita para destacar */
-  color: #444;
-  margin-bottom: 5px;
-}
-
-/* Estilo de los campos de entrada */
-.form-section .form-control,
-.form-section .form-select,
-.form-section textarea {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+.testimonios p {
   font-size: 1rem;
-  transition: all 0.3s ease; /* Transición suave */
+  color: #343a40;
 }
 
-.form-section .form-control:focus,
-.form-section .form-select:focus,
-.form-section textarea:focus {
-  border-color: #007bff; /* Color azul al enfocar */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
-  outline: none;
+.testimonios h6 {
+  font-weight: bold;
 }
 
-/* Estilo de los botones */
-.form-section .btn-primary {
-  background-color: #007bff; /* Azul profesional */
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.form-section .btn-primary:hover {
-  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
-}
-
-/* Estilo del pie del formulario */
-.form-section .form-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #666;
-}/* Estilo general del footer */
-#footer-section {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(19, 18, 18, 0.8));
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #ffffff;
-  padding: 30px 15px;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Texto del footer */
-#footer-section  p, a {
-  color: #000000;
-  margin: 0.5rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-#footer-section  a:hover {
-  color: #ffc107; /* dorado al pasar el mouse */
-}
-
-/* Separación para elementos múltiples */
-#footer-section  .footer-section {
-  margin-bottom: 15px;
-}
-
-/* Estilo para íconos de redes sociales (si usas FontAwesome) */
-#footer-section .social-icons a {
-  margin-right: 20px;
-  font-size: 2.6rem;
-  display: inline-block;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-
-#footer-section .social-icons a:hover {
-  color: #ffc107;
-}
-/* CONTENEDOR GENERAL */
-section.container {
-  max-width: 1200px;
-}
-
-/* TÍTULO Y UBICACIÓN */
-h2.text-uppercase {
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: #222;
-}
-
-p.text-muted {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  color: #222;
-  text-align: left;
-}
-
-/* CARRUSEL DE IMÁGENES */
-.carousel-item img {
-  max-height: 500px;
+.testimonios img {
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
+  /* ---------------------------
+     FOOTER
+  ---------------------------- */
+  #footer-section {
+    background: url('../assets/img/fondofooter.jpg') no-repeat center center;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 30px 15px;
+    font-size: 1rem;
+    box-shadow: 0 -2px 6px rgba(18, 18, 19, 0.4);
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+  }
+  
+  #footer-section p, #footer-section a {
+    color: #000000;
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  #footer-section a:hover {
+    color: #ffd045cb;
+  }
+ 
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-/* PANEL DE DETALLE */
-.propiedad-detalle-box {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* PRECIO */
-.propiedad-precio {
-  background-color: #ffffff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px 15px;
-  text-align: right;
-}
-
-/* DATOS DE CONTACTO Y ACCIONES */
-
-
-section.container {
-  max-width: 1200px;
-}
-
-h2.text-uppercase {
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: #faf3f3;
-}
-
-p.text-muted {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.carousel-item img {
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.propiedad-detalle-box {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.propiedad-precio {
-  background-color: #ffffff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px 15px;
-  text-align: right;
-}
-
-.propiedad-contacto {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-}
-
-.propiedad-contacto p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #202020;
-}
-
-.propiedad-contacto i {
-  color: #0d6efd;
-}
-
-.propiedad-formulario {
-  padding: 15px;
-}
-
-.propiedad-formulario h5 {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #000;
-  padding-bottom: 5px;
-}
-
-.propiedad-formulario input,
-.propiedad-formulario textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 8px 10px;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-  border-radius: 3px;
-}
-
-.propiedad-formulario button {
-  background-color: #0d6efd;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.propiedad-formulario button:hover {
-  background-color: #084298;
-}
-/*estilos para  la seccion about us*/
-.about-section h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #0d6efd;
-}
-
-.about-section p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.about-section hr {
-  width: 80px;
-  height: 3px;
-  background-color: #0d6efd;
-  border: none;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
+/* ---------------------------
+   BOTÓN FLOTANTE DE WHATSAPP
+---------------------------- */
 .whatsapp-float {
   position: fixed;
-  bottom: 4%; /* Distancia desde la parte inferior en porcentaje */
-  right: 2%; /* Distancia desde la parte izquierda en porcentaje */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  background-color: #25d366; /* Color de fondo de WhatsApp */
+  bottom: 4%; /* Distancia desde la parte inferior */
+  right: 2%; /* Distancia desde la parte derecha */
+  z-index: 1000;
+  background-color: #25d366; /* Color verde de WhatsApp */
   border-radius: 50%;
-  width: 80px; /* Tamaño inicial del ícono */
-  height: 80px;
+  width: 70px; /* Tamaño del ícono */
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-float a {
   color: white;
-  font-size: 3rem; /* Tamaño del ícono relativo */
+  font-size: 2rem; /* Tamaño del ícono */
   text-decoration: none;
 }
 
 .whatsapp-float:hover {
   background-color: #1ebe57; /* Color más oscuro al pasar el cursor */
+  transform: scale(1.1); /* Efecto de agrandamiento */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-custom {
-    text-align: center;
-  }
-  .whatsapp-float {
-    width: 50px; /* Reduce el tamaño del ícono */
-    height: 50px;
-    bottom: 3%; /* Ajusta la posición */
-    left: 3%;
-  }
-
-  .whatsapp-float a {
-    font-size: 1.2rem; /* Reduce el tamaño del ícono */
-  }
-
-  .footer-custom .social-icons {
-    justify-content: center;
-  }
-
-  .navbar-nav .nav-link {
-    margin-left: 0;
-    padding: 8px 16px;
-  }
-  .contact-banner .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-    .contact-banner .container {
-      flex-direction: column;
-      text-align: center;
-      gap: 0.5rem;
-    }
-    .propiedad-precio {
-      text-align: center;
-      font-size: 1.1rem;
+  /* ---------------------------
+     RESPONSIVE
+  ---------------------------- */
+  @media (max-width: 768px) {
+    h1, .titulo-principal {
+      font-size: 2rem;
     }
   
-    h2.text-uppercase {
-      font-size: 1.3rem;
-    }
-    .carousel-item img {
-      max-height: 300px;
+    h2, .subtitulo-principal {
+      font-size: 1.75rem;
     }
   
-    h2 {
+    h3, h4 {
       font-size: 1.25rem;
     }
+  
     .form-section {
       padding: 20px;
     }
@@ -593,5 +325,32 @@ p.text-muted {
       font-size: 1.5rem;
     }
   
+    .form-section h3 {
+      font-size: 1.2rem;
+    }
   
-}
+    #footer-section p, #footer-section a {
+      font-size: 0.9rem;
+    }
+    .whatsapp-float {
+      width: 50px; /* Reduce el tamaño del ícono */
+      height: 50px;
+      bottom: 3%; /* Ajusta la posición */
+      right: 3%;
+    }
+  
+    .whatsapp-float a {
+      font-size: 1.5rem; /* Reduce el tamaño del ícono */
+    }
+      .about-section {
+        padding: 40px 15px;
+      }
+    
+      .about-section h2, .about-section h3 {
+        font-size: 1.5rem; /* Reduce el tamaño de los títulos en móviles */
+      }
+      .about-section p {
+        font-size: 0.95rem; /* Reduce el tamaño de los párrafos en móviles */
+      }
+    
+  }
