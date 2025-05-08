@@ -127,7 +127,7 @@ html {
   font-size: 1rem;
   color: #555; /* Color gris para párrafos */
   text-align: justify; /* Justifica los textos */
-  line-height: 1.8; /* Mejora la legibilidad */
+  line-height: 1.4; /* Mejora la legibilidad */
 }
 
 .about-section hr {
@@ -175,9 +175,9 @@ html {
   }
   
   .form-background h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #f8f9fa;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff !important;
     line-height: 1.6;
   }
   
@@ -195,7 +195,54 @@ html {
   .form-section .btn-primary:hover {
     background-color: #0056b3;
   }
-   
+   /* ------------------------------
+ventana emergente post formulario
+-------------------------------*/
+/* Imagen de fondo cubriendo toda la ventana modal */
+.modal-full-image {
+  background-image: url('../assets/img/emergente.jpg'); /* Ajusta la ruta si es necesario */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay del contenido sobre la imagen */
+.modal-overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight:lighter;
+  color: #ffffff;
+  margin-top: 390px;
+}
+
+/* Personalización del botón de cierre */
+.modal .btn-close {
+  background-color: transparent; /* Fondo blanco */
+  border: none;
+  opacity: 0.8; /* Transparencia */
+}
+
+.modal .btn-close:hover {
+  opacity: 1; /* Sin transparencia al pasar el cursor */
+}
   /* ---------------------------
      PROPIEDADES
   ---------------------------- */
@@ -271,18 +318,50 @@ html {
     filter: brightness(1.2);
     transition: all 0.3s ease;
   }
-  
-  #footer-section p, #footer-section a {
-    color: #000000;
-    margin: 0.5rem;
-    font-size: 1rem;
-    text-decoration: none;
-  }
-  
-  #footer-section a:hover {
-    color: #ffd045cb;
-  }
- 
+/* Información de contacto */
+#footer-section ul{
+  padding: 0;
+  margin: 0;
+}
+
+#footer-section li {
+  color: #f5de93; /* Dorado semiopaco */
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y nítida */
+  margin-bottom: 10px;
+}
+
+#footer-section a {
+  color: #f5de93; /* Mismo color dorado */
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block; /* Para que el padding funcione */
+}
+#footer-section .list-unstyled i{
+  color: #f5de93; /* Mismo color dorado */
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+#footer-section i{
+  color: #f5de93; /* Mismo color dorado */
+  font-size: 2.1rem;
+  margin-right: 2.5rem; /* Espacio entre ícono y texto */
+  display: inline-block;
+}
+#footer-section i:hover {
+  color: #ffd351; /* Para que el padding funcione */
+}
+
+#footer-section a:hover {
+  color: #ffd351; /* Dorado más brillante al pasar el cursor */
+}
+
+/* Logo del footer */
+#footer-section img {
+  max-width: 200px;
+  height: auto;
+} 
 
 /* ---------------------------
    BOTÓN FLOTANTE DE WHATSAPP
@@ -314,10 +393,10 @@ html {
   transform: scale(1.1); /* Efecto de agrandamiento */
 }
 
-  /* ---------------------------
-     RESPONSIVE
-  ---------------------------- */
-  @media (max-width: 768px) {
+ /* ---------------------------
+  RESPONSIVE
+---------------------------- */
+@media (max-width: 768px) {
     h1, .titulo-principal {
       font-size: 2rem;
     }
@@ -347,60 +426,11 @@ html {
       font-size: 1.4rem;
       color: #1b244b;
     }
-/* ------------------------------
-Fondo completo con imagen 
--------------------------------*/
-/* Imagen de fondo cubriendo toda la ventana modal */
-.modal-full-image {
-  background-image: url('../assets/img/emergente.jpg'); /* Ajusta la ruta si es necesario */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  position: relative;
-  min-height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Overlay del contenido sobre la imagen */
-.modal-overlay-content {
-  background-color: rgba(0, 0, 0, 0.5); /* oscurece ligeramente para legibilidad */
-  padding: 30px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.modal-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-.modal-overlay-content p {
-  color: transparent;
-  font-size: 1rem;
-}
-
-.modal-overlay-content .btn-secondary {
-  background-color: #007bff;
-  border: none;
-  padding: 10px 25px;
-  font-weight: 600;
-  border-radius: 5px;
-}
-
-.modal-overlay-content .btn-secondary:hover {
-  background-color: #0056b3;
-}
-
-  
-    #footer-section p, #footer-section a {
-      font-size: 0.9rem;
+    #footer-section li {
+      font-size: 0.9rem; /* Ajustar tamaño de texto en pantallas pequeñas */
+    }
+    .social-icons a {
+      font-size: 1.2rem; /* Reducir tamaño de íconos en pantallas pequeñas */
     }
     .whatsapp-float {
       width: 50px; /* Reduce el tamaño del ícono */
