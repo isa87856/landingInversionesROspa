@@ -2,7 +2,7 @@
     <div class="form-background">
         <div class="text-center">
             <h2 class="mb-4">¿Quieres Vender o Arrendar tu Propiedad?</h2>
-            <h3 class="text-muted">No te preocupes, Nosotros te asesoramos <br> <br> Dejanos tus datos en el siguiente formulario, <br> nos contactaremos contigo. </h3>
+            <h3 class="text-muted">No te preocupes, Nosotros te asesoramos<br> Dejanos tus datos en el siguiente formulario, <br> pronto nos contactaremos contigo. </h3>
         </div>
     </div>
     
@@ -97,14 +97,35 @@
           </div>
         </div>
 
-        <div class="mt-4">
-          <button type="submit" class="btn btn-primary w-100">Enviar Información</button>
+       <!-- Mensaje de error -->
+<div class="mt-2 text-danger d-none" id="error-message">
+    Por favor, completa todos los campos requeridos.
+  </div>
+  
+  <div class="mt-4">
+    <button type="button" class="btn btn-primary w-100" id="submit-button">Enviar Información</button>
+  </div>
+  
+  <!-- Ventana emergente -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">¡Enviado con éxito!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-
-        <div class="form-footer text-center">
-          <p>¡Tus datos estan protegidos!<br>Muy pronto nos pondremos en contacto para atender tus consultas.</p>
+        <div class="modal-body">
+          Tus datos han sido enviados correctamente. Nos pondremos en contacto contigo pronto.
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
       </form>
     </div>
 
   </div>
+
+  
