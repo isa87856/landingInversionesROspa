@@ -151,53 +151,37 @@ html {
   /* ---------------------------
      FORMULARIO DE RECEPCION DE PROPIEDADES PARA CORRETAJE
   ---------------------------- */
+  #tuPropiedad-section {
+    background-image: url('../assets/img/corretaje.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+  }
+  
+  /* Fondo del formulario */
   .form-section {
-    margin-top: 60px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.555); /* Fondo translúcido */
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .form-section h2 {
+  /* Textos del lado derecho */
+  .form-background h2 {
     font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
   }
   
-  .form-section h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 20px;
+  .form-background h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #f8f9fa;
+    line-height: 1.6;
   }
   
-  .form-section .form-label {
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 5px;
-  }
-  
-  .form-section .form-control,
-  .form-section .form-select,
-  .form-section textarea {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .form-section .form-control:focus,
-  .form-section .form-select:focus,
-  .form-section textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-  }
-  
+  /* Botón del formulario */
   .form-section .btn-primary {
     background-color: #007bff;
     border: none;
@@ -346,16 +330,20 @@ html {
       font-size: 1.25rem;
     }
   
+    #tuPropiedad-section {
+      padding: 30px 15px;
+    }
+  
     .form-section {
       padding: 20px;
     }
   
-    .form-section h2 {
+    .form-background h2 {
       font-size: 1.5rem;
     }
   
-    .form-section h3 {
-      font-size: 1.2rem;
+    .form-background h3 {
+      font-size: 1rem;
     }
   
     #footer-section p, #footer-section a {
@@ -371,15 +359,15 @@ html {
     .whatsapp-float a {
       font-size: 1.5rem; /* Reduce el tamaño del ícono */
     }
-      .about-section {
+    .about-section {
         padding: 40px 15px;
-      }
+    }
     
-      .about-section h2, .about-section h3 {
+    .about-section h2, .about-section h3 {
         font-size: 1.5rem; /* Reduce el tamaño de los títulos en móviles */
-      }
-      .about-section p {
+    }
+    .about-section p {
         font-size: 0.95rem; /* Reduce el tamaño de los párrafos en móviles */
-      }
+    }
     
   }
