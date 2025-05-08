@@ -7,95 +7,98 @@
     </div>
     
     <div class="form-section mx-auto" style="max-width: 800px;">
-      <form>
-        <div class="text-center">
-            <h2 class="mb-4">Formulario de contacto</h2>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-4">
-            <label for="nombre" class="form-label">Nombre*</label>
-            <input type="text" class="form-control" id="nombre" required>
-          </div>
-          <div class="col-md-4">
-            <label for="mail" class="form-label">Email*</label>
-            <input type="email" class="form-control" id="mail" required>
-          </div>
-          <div class="col-md-4">
-            <label for="fono" class="form-label">Fono / Whatsapp*</label>
-            <input type="tel" class="form-control" id="fono" required>
-          </div>
-        </div><br><br>
-        <div class="text-center">
-            <h3 class="mb-4">Información adicional</h3>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="direccion" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="direccion">
-          </div>
-          <div class="col-md-3">
-            <label for="ciudad" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="ciudad">
-          </div>
-          <div class="col-md-3">
-            <label for="comuna" class="form-label">Comuna</label>
-            <input type="text" class="form-control" id="comuna">
-          </div>
-
-          <div class="col-md-6">
-            <label for="tipo" class="form-label">Tipo de Propiedad</label>
-            <input type="text" class="form-control" id="tipo">
-          </div>
-          <div class="col-md-6">
-            <label for="condicion" class="form-label">Condición de Propiedad</label>
-            <select class="form-select" id="condicion">
-              <option value="">Seleccione</option>
-              <option>Excelente</option>
-              <option>Buena</option>
-              <option>Intermedia</option>
-              <option>Necesita Arreglos</option>
-            </select>
-          </div>
-
-          <div class="col-md-3">
-            <label for="habitaciones" class="form-label">Habitaciones</label>
-            <select class="form-select" id="habitaciones">
-              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <label for="banos" class="form-label">Baños</label>
-            <select class="form-select" id="banos">
-              <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label for="caracteristicas" class="form-label">Características adicionales</label>
-            <textarea class="form-control" id="caracteristicas" rows="3" placeholder="Ej: Alfombra nueva, cerca de un parque, piscina, quincho..."></textarea>
-          </div>
-
-          <div class="col-md-4">
-            <label for="metros" class="form-label">Tamaño aprox. (m²)</label>
-            <input type="number" class="form-control" id="metros">
-          </div>
-          <div class="col-md-4">
-            <label for="anos" class="form-label">Años de propiedad</label>
-            <input type="number" class="form-control" id="anos">
-          </div>
-
-          <div class="col-md-4">
-            <label for="servicio" class="form-label">Servicio</label>
-            <select class="form-select" id="servicio">
-              <option>Venta</option>
-              <option>Arriendo</option>
-              <option>Otro</option>
-            </select>
-          </div>
-          <div class="col-12">
-            <label for="comentarios" class="form-label">Dejanos tus comentarios</label>
-            <textarea class="form-control" id="comentarios" rows="3"></textarea>
-          </div>
-        </div>
+        <form action="https://formspree.io/f/mzzrgarz" method="POST">
+            <div class="text-center">
+              <h2 class="mb-4">Formulario de contacto</h2>
+            </div>
+          
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="nombre" class="form-label">Nombre*</label>
+                <input type="text" name="nombre" class="form-control" id="nombre" required>
+              </div>
+              <div class="col-md-4">
+                <label for="mail" class="form-label">Email*</label>
+                <input type="email" name="email" class="form-control" id="mail" required>
+              </div>
+              <div class="col-md-4">
+                <label for="fono" class="form-label">Fono / Whatsapp*</label>
+                <input type="tel" name="telefono" class="form-control" id="fono" required>
+              </div>
+            </div><br><br>
+          
+            <div class="text-center">
+              <h3 class="mb-4">Información adicional</h3>
+            </div>
+          
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" name="direccion" class="form-control" id="direccion">
+              </div>
+              <div class="col-md-3">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" name="ciudad" class="form-control" id="ciudad">
+              </div>
+              <div class="col-md-3">
+                <label for="comuna" class="form-label">Comuna</label>
+                <input type="text" name="comuna" class="form-control" id="comuna">
+              </div>
+          
+              <div class="col-md-6">
+                <label for="tipo" class="form-label">Tipo de Propiedad</label>
+                <input type="text" name="tipo_propiedad" class="form-control" id="tipo">
+              </div>
+              <div class="col-md-6">
+                <label for="condicion" class="form-label">Condición de Propiedad</label>
+                <select name="condicion" class="form-select" id="condicion">
+                  <option value="">Seleccione</option>
+                  <option>Excelente</option>
+                  <option>Buena</option>
+                  <option>Intermedia</option>
+                  <option>Necesita Arreglos</option>
+                </select>
+              </div>
+          
+              <div class="col-md-3">
+                <label for="habitaciones" class="form-label">Habitaciones</label>
+                <select name="habitaciones" class="form-select" id="habitaciones">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="banos" class="form-label">Baños</label>
+                <select name="banos" class="form-select" id="banos">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                </select>
+              </div>
+          
+              <div class="col-md-6">
+                <label for="caracteristicas" class="form-label">Características adicionales</label>
+                <textarea name="caracteristicas" class="form-control" id="caracteristicas" rows="3"></textarea>
+              </div>
+          
+              <div class="col-md-4">
+                <label for="metros" class="form-label">Tamaño aprox. (m²)</label>
+                <input type="number" name="metros" class="form-control" id="metros">
+              </div>
+              <div class="col-md-4">
+                <label for="anos" class="form-label">Años de propiedad</label>
+                <input type="number" name="anos" class="form-control" id="anos">
+              </div>
+              <div class="col-md-4">
+                <label for="servicio" class="form-label">Servicio</label>
+                <select name="servicio" class="form-select" id="servicio">
+                  <option>Venta</option>
+                  <option>Arriendo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="comentarios" class="form-label">Déjanos tus comentarios</label>
+                <textarea name="comentarios" class="form-control" id="comentarios" rows="3"></textarea>
+              </div>
+            </div>
 
        <!-- Mensaje de error -->
 <div class="mt-2 text-danger d-none" id="error-message">
