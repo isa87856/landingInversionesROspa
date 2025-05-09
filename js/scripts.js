@@ -67,31 +67,3 @@ function loadComponent(filePath, containerId, callback) {
 function guardarPropiedad(id) {
   localStorage.setItem("propiedadSeleccionada", id);
 }
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname.includes("detallePropiedad.html")) {
-    const id = localStorage.getItem("propiedadSeleccionada");
-    const propiedad = propiedades.find(p => p.id == id) || propiedades[0];
-
-    document.querySelector(".titulo-propiedad").textContent = propiedad.titulo;
-    document.querySelector(".text-muted").innerHTML = `<i class="bi bi-geo-alt-fill"></i> ${propiedad.direccion}`;
-    document.querySelector(".descripcion p").textContent = propiedad.descripcion;
-
-    const carouselInner = document.querySelector(".carousel-inner");
-    const carouselIndicators = document.querySelector(".carousel-indicators");
-
-    carouselInner.innerHTML = "";
-    carouselIndicators.innerHTML = "";
-
-    propiedad.imagenes.forEach((img, index) => {
-      const isActive = index === 0 ? "active" : "";
-      carouselIndicators.innerHTML += `
-        <button type="button" data-bs-target="#carouselPropiedad" data-bs-slide-to="${index}" class="${isActive}" aria-label="Imagen ${index + 1}"></button>
-      `;
-      carouselInner.innerHTML += `
-        <div class="carousel-item ${isActive}">
-          <img src="${img}" class="d-block w-100 rounded shadow" alt="Imagen ${index + 1}">
-        </div>
-      `;
-    });
-  }
-});

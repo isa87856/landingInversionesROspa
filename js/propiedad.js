@@ -26,6 +26,14 @@ class Propiedad {
       "UF 33.400",
       "Moderna parcela con piscina, jardines formales y casa equipada. Ideal para familias grandes.",
       ["assets/img/house.jpg", "assets/img/house2.jpg", "assets/img/house3.jpg"]
+    ),
+    new Propiedad(
+      3,
+      "Casa estilo Mediterraneo",
+      "Los Almendrales 7010, Chicureo, Santiago",
+      "UF 38.000",
+      "Moderna parcela con piscina, jardines formales y casa equipada. Ideal para familias grandes.",
+      ["assets/img/house.jpg", "assets/img/house2.jpg", "assets/img/house3.jpg"]
     )
   ];
   
