@@ -379,38 +379,18 @@ ventana emergente post formulario
   background-color: #007bff;
 }
 
-/* ----------------------
-Información de contacto dentro de detallesPropiedades.html 
--------------------------------------*/
-/* Estilo para los íconos */
-.info-contacto i {
-  margin-right: 8px;
-  color: #1f2022;
-  align-items: center;
-  font-size: 1.3rem;
+/* ============================
+   Estilos base para detallePropiedad.html
+============================ */
+
+/* Información de contacto */
+.info-contacto {
+  background-color: rgb(245, 210, 113) !important;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-/* Estilo para los textos */
-.info-contacto p {
-  text-align: left;
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-/* Estilo para los enlaces */
-.info-contacto .contact-link {
-  color: #1f2022; /* Color del texto */
-  text-decoration: none; /* Sin subrayado */
-  transition: color 0.3s ease;
-}
-
-.info-contacto .contact-link:hover {
-  color: rgb(211, 25, 25); 
-  text-decoration: underline;
-}
-
-/* Título de la sección */
 .info-contacto h6 {
   text-align: center;
   font-weight: 700;
@@ -418,28 +398,42 @@ Información de contacto dentro de detallesPropiedades.html
   color: #ffffff;
 }
 
-/* Fondo de la sección */
-.info-contacto {
-  background-color: rgb(245, 210, 113) !important;
-  padding: 1rem;
-  border-radius: 8px;
+.info-contacto p {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-/* Card de propiedad en el aside */
+.info-contacto i {
+  margin-right: 8px;
+  color: #1f2022;
+  font-size: 1.3rem;
+}
+
+.contact-link {
+  color: #1f2022;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: rgb(211, 25, 25);
+  text-decoration: underline;
+}
+
+/* Card-aside para propiedades recientes */
 .card-aside {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
 .card-aside:hover {
   transform: scale(1.02);
-}
-.col-md-3{
-  margin-left: 5rem;
 }
 
 .card-aside img {
@@ -449,7 +443,7 @@ Información de contacto dentro de detallesPropiedades.html
   transition: 0.3s ease;
 }
 
-/* Capa oscura oculta por defecto */
+/* Capa oscura al pasar el mouse */
 .card-aside::after {
   content: "";
   position: absolute;
@@ -457,13 +451,13 @@ Información de contacto dentro de detallesPropiedades.html
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
 }
 
-/* Título oculto por defecto */
+/* Título sobre imagen */
 .card-aside-title {
   position: absolute;
   bottom: 0;
@@ -480,10 +474,23 @@ Información de contacto dentro de detallesPropiedades.html
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar fondo oscuro y título al pasar el mouse */
+/* Hover para mostrar título y capa */
 .card-aside:hover::after,
 .card-aside:hover .card-aside-title {
   opacity: 1;
+}
+
+/* Carousel imagen principal */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Eliminar margen lateral que daña mobile */
+.col-md-3 {
+  margin-left: 0 !important;
 }
   /* ---------------------------
      FOOTER
@@ -667,44 +674,44 @@ header .navbar-toggler {
     /*--------------------
      Ajustes para detallePropiedad.html
      ---------------------------------*/
-    .detalle-propiedad .info-contacto,
-  .detalle-propiedad .formulario-contacto,
-  .detalle-propiedad .otras-propiedades {
-    margin-top: 1rem;
-  }
-
-  .card-aside {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: none;
-  }
-
-  .card-aside img {
-    width: 100px;
-    height: auto;
-    border-radius: 8px;
-  }
-  .card-aside-title {
-    position: static;
-    opacity: 1;
-    background: none;
-    color: #000;
-    font-size: 0.95rem;
-    padding: 0;
-    text-align: left;
-  }
-
-  .card-aside:hover::after {
-    opacity: 0;
-  }
-  
-    .carousel-inner img {
-      max-height: 280px;
-    }
-  
-    .titulo-propiedad {
-      font-size: 1.4rem;
-    }
+     .detalle-propiedad .info-contacto,
+     .detalle-propiedad .otras-propiedades {
+       margin-top: 1rem;
+     }
+   
+     .card-aside {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       box-shadow: none;
+     }
+   
+     .card-aside img {
+       width: 100px;
+       height: auto;
+       border-radius: 8px;
+     }
+   
+     .card-aside-title {
+       position: static;
+       opacity: 1;
+       background: none;
+       color: #000;
+       font-size: 0.95rem;
+       padding: 0;
+       text-align: left;
+     }
+   
+     .card-aside:hover::after {
+       opacity: 0;
+     }
+   
+     .carousel-inner img {
+       max-height: 280px;
+     }
+   
+     .titulo-propiedad {
+       font-size: 1.4rem;
+     }
     
   }
