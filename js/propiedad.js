@@ -17,7 +17,7 @@ class Propiedad {
       "Cam. San Alberto Hurtado 2513, Padre Hurtado, RM, Chile",
       "CLP $1.000.000 mes",
       "Terreno amplio con uso comercial en excelente ubicación, cercano a servicios y avenidas principales.",
-      ["assets/img/house2.jpg", "assets/img/house222.jpg", "assets/img/house22.jpg"]
+      ["assets/img/house2.jpg", "assets/img/house22.jpg", "assets/img/house22.jpg"]
     ),
     new Propiedad(
       2,
