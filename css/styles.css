@@ -489,8 +489,8 @@ ventana emergente post formulario
 }
 
 /* Eliminar margen lateral que daña mobile */
-.col-md-3 {
-  margin-left: 0 !important;
+.col-lg-3 {
+  margin-left: 1.5rem;
 }
   /* ---------------------------
      FOOTER
