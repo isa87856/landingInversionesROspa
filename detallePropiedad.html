@@ -12,6 +12,9 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!--<script src="js/propiedad.js"></script>-->
   <script src="js/scripts.js"></script>
+   <!-- AOS - Animate On Scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </head>
 <body>
@@ -26,21 +29,19 @@
 
   <div class="row g-4">
     <!-- Carousel principal -->
-    <div class="col-lg-8">
-      <div id="carouselPropiedad" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators"></div>
-        <div class="carousel-inner"></div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPropiedad" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselPropiedad" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-
+    <div id="carouselPropiedad" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators"></div>
+      <div class="carousel-inner"></div>
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselPropiedad" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselPropiedad" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
       <div class="descripcion mt-4">
         <h5 class="mb-3">Descripción de la propiedad</h5>
         <p class="descripcion-texto"></p>
@@ -81,32 +82,32 @@
   <script src="js/scripts.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const id = localStorage.getItem("propiedadSeleccionada");
-      if (!id) return;
-  
-      const propiedad = propiedades.find(p => p.id == id);
-      if (!propiedad) return;
-  
-      document.querySelector(".titulo-propiedad").textContent = propiedad.titulo;
-      document.querySelector(".ubicacion-propiedad").textContent = propiedad.ubicacion;
-      document.querySelector(".descripcion-texto").textContent = propiedad.descripcion;
-  
-      // Construir carrusel
-      const carouselInner = document.querySelector(".carousel-inner");
-      const carouselIndicators = document.querySelector(".carousel-indicators");
-      carouselInner.innerHTML = "";
-      carouselIndicators.innerHTML = "";
-  
-      propiedad.imagenes.forEach((img, index) => {
-        const isActive = index === 0 ? "active" : "";
-        carouselInner.innerHTML += `
-          <div class="carousel-item ${isActive}">
-            <img src="${img}" class="d-block w-100 rounded shadow" alt="Imagen propiedad ${index + 1}">
-          </div>`;
-        carouselIndicators.innerHTML += `
-          <button type="button" data-bs-target="#carouselPropiedad" data-bs-slide-to="${index}" class="${isActive}" aria-label="Slide ${index + 1}"></button>`;
-      });
-  
+  const id = localStorage.getItem("propiedadSeleccionada");
+  if (!id) return;
+
+  const propiedad = propiedades.find(p => p.id == id);
+  if (!propiedad) return;
+
+  document.querySelector(".titulo-propiedad").textContent = propiedad.titulo;
+  document.querySelector(".ubicacion-propiedad").textContent = propiedad.direccion;
+  document.querySelector(".descripcion-texto").textContent = propiedad.descripcion;
+
+  // Construir carrusel
+  const carouselInner = document.querySelector(".carousel-inner");
+  const carouselIndicators = document.querySelector(".carousel-indicators");
+  carouselInner.innerHTML = "";
+  carouselIndicators.innerHTML = "";
+
+  propiedad.imagenes.forEach((img, index) => {
+    const isActive = index === 0 ? "active" : "";
+    carouselInner.innerHTML += `
+      <div class="carousel-item ${isActive}">
+        <img src="${img}" class="d-block w-100 rounded shadow" alt="Imagen propiedad ${index + 1}">
+      </div>`;
+    carouselIndicators.innerHTML += `
+      <button type="button" data-bs-target="#carouselPropiedad" data-bs-slide-to="${index}" class="${isActive}" aria-label="Slide ${index + 1}"></button>`;
+  });
+});
       // 👉 Mostrar 3 propiedades distintas en el aside
       const contenedorOtras = document.getElementById("otras-propiedades-container");
   
@@ -128,7 +129,7 @@
     window.location.href = "detallePropiedad.html";
   };
   contenedorOtras.appendChild(img);
-});
+
 
 // Activar tooltips de Bootstrap
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
