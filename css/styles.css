@@ -487,14 +487,9 @@ ventana emergente post formulario
   max-height: 500px;
   object-fit: cover;
 }
-
-/* Eliminar margen lateral que daña mobile */
-.col-lg-3 {
-  margin-left: 1.5rem;
-}
-  /* ---------------------------
-     FOOTER
-  ---------------------------- */
+/* ---------------------------
+ FOOTER
+---------------------------- */
   #footer-section {
     background: url('../assets/img/fondofooter.jpg') no-repeat center center;
     background-size: cover;
@@ -671,19 +666,17 @@ header .navbar-toggler {
     .about-section p {
         font-size: 0.95rem; /* Reduce el tamaño de los párrafos en móviles */
     }
-    /*--------------------
-     Ajustes para detallePropiedad.html
-     ---------------------------------*/
-     .detalle-propiedad .info-contacto,
-     .detalle-propiedad .otras-propiedades {
-       margin-top: 1rem;
-     }
+    
+    .detalle-propiedad .info-contacto,
+   .detalle-propiedad .otras-propiedades {
+     margin-top: 1rem;/*Ajustes  para detallePropiedad.html-*/
+    }
    
-     .card-aside {
-       display: flex;
-       align-items: center;
-       gap: 10px;
-       box-shadow: none;
+   .card-aside {
+     display: flex;
+     align-items: center;
+      gap: 10px;
+     box-shadow: none;
      }
    
      .card-aside img {
