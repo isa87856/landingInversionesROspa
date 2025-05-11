@@ -53,15 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Función para cargar componentes dinámicamente
 function loadComponent(filePath, containerId, callback) {
+  const container = document.getElementById(containerId);
+  if (!container) return; // ← añade esta verificación
+
   fetch(filePath)
     .then(response => response.text())
     .then(html => {
-      document.getElementById(containerId).innerHTML = html;
-      if (callback) callback(); // Ejecutar callback después de cargar el componente
+      container.innerHTML = html;
+      if (callback) callback();
     });
 }
+
 
 // Función para guardar la propiedad seleccionada
 function guardarPropiedad(id) {
