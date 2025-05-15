@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("components/header.html", "header-container");
   loadComponent("components/footer.html", "footer-container");
   loadComponent("components/propiedades.html", "propiedades-container");
-  loadComponent("components/aboutUs.html", "nosotrosRo-container");
+  loadComponent("components/aboutUs.html", "aboutRo-container");
   loadComponent("components/experiencias.html", "experiencias-container");
   loadComponent("components/tuPropiedad.html", "tuPropiedad-container", function () {
     // Registrar el evento del formulario después de cargar el componente
