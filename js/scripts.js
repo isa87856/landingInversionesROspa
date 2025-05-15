@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("components/footer.html", "footer-container");
   loadComponent("components/propiedades.html", "propiedades-container");
   loadComponent("components/aboutUs.html", "nosotros-container");
+  loadComponent("components/experiencias.html", "experiencias-container");
   loadComponent("components/tuPropiedad.html", "tuPropiedad-container", function () {
     // Registrar el evento del formulario después de cargar el componente
     const form = document.getElementById("contact-form");
