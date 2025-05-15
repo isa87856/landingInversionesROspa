@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Cargar componentes dinámicamente
   loadComponent("components/header.html", "header-container");
   loadComponent("components/footer.html", "footer-container");
+  loadComponent("components/questions.html", "questions-container");
+  loadComponent("components/about.html", "about-container");
   loadComponent("components/propiedades.html", "propiedades-container");
-  loadComponent("components/aboutUs.html", "aboutRo-container");
   loadComponent("components/experiencias.html", "experiencias-container");
   loadComponent("components/tuPropiedad.html", "tuPropiedad-container", function () {
     // Registrar el evento del formulario después de cargar el componente
@@ -56,14 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function loadComponent(filePath, containerId, callback) {
   const container = document.getElementById(containerId);
-  if (!container) return; // ← añade esta verificación
+  if (!container) {
+    console.error(`No se encontró el contenedor con ID: ${containerId}`);
+    return;
+  }
 
   fetch(filePath)
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error al cargar el archivo: ${filePath} (Estado: ${response.status})`);
+      }
+      return response.text();
+    })
     .then(html => {
       container.innerHTML = html;
       if (callback) callback();
-    });
+    })
+    .catch(error => console.error("Error al cargar el componente:", error));
 }
 
 
