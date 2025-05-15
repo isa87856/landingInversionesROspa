@@ -487,6 +487,98 @@ ventana emergente post formulario
   max-height: 500px;
   object-fit: cover;
 }
+/*-------------
+preguntas y respuestas
+------------------*/
+/* Fondo con imagen */
+.faq-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/questionss.png');
+  background-size: cover;
+  background-position: center;
+  /*opacity: 0;*/
+  z-index: 0;
+}
+
+/* Contenedor principal */
+.faq-section .container {
+  z-index: 1;
+  position: relative;
+}
+
+/* Encabezado */
+.faq-section h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #151061;
+}
+
+.faq-section p {
+  font-size: 1.5rem;
+  color: #151061 !important;
+}
+
+/* Acordeón general */
+.accordion {
+  background-color: transparent;
+  opacity: 0.8;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 90%;
+
+}
+
+/* Elementos individuales */
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid transparent;
+}
+
+/* Botón del acordeón */
+.accordion-button {
+  font-weight: 600;
+  background-color: #f9f9f9;
+  color: #214aa9;
+  padding: 1rem;
+  font-size: 1.15rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: transparent;
+}
+
+/* Íconos personalizados para abrir/cerrar */
+.accordion-button::after {
+  content: '\25BC'; /* ícono flecha abajo */
+  font-size: 0.8rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg); /* flecha hacia arriba */
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+  background-color: transparent;
+  font-size: 1rem;
+  color: #323155;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+}
+
+/* Último sin borde */
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
 /* ---------------------------
  FOOTER
 ---------------------------- */
@@ -706,5 +798,19 @@ header .navbar-toggler {
      .titulo-propiedad {
        font-size: 1.4rem;
      }
+     /*seccion de preguntas y respuestas*/
+     .faq-section h2 {
+      font-size: 1.7rem;
+    }
+  
+    .accordion-button {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+  
+    .accordion-body {
+      font-size: 0.9rem;
+      padding: 0.8rem 1.2rem;
+    }
     
   }
