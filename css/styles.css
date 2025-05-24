@@ -307,7 +307,13 @@ ventana emergente post formulario
    seccion de experiencias o testimonios 
 ---------------------------- */
 .testimonios {
-  background-color: #f8f9fa;
+  /*background-image: url('../assets/img/testimonial.jpg');
+  
+  background-repeat: no-repeat;
+  background-size: cover; 
+  opacity: 0.9;
+  background-position: center;*/
+  background-color: gradient(to right, #f5f3e2, #f9fc78);
   padding: 60px 20px;
 }
 
