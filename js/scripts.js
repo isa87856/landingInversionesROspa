@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("components/header.html", "header-container");
   loadComponent("components/footer.html", "footer-container");
   loadComponent("components/questions.html", "questions-container");
+  loadComponent("components/wspFloat.html", "wsp-container");
   loadComponent("components/about.html", "about-container");
   loadComponent("components/propiedades.html", "propiedades-container");
   loadComponent("components/experiencias.html", "experiencias-container");
